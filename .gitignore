@@ -1,0 +1,10 @@
+# Obsidian
+.obsidian/
+.trash/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 처리 대기 중인 소스는 트래킹 안 함 (선택사항)
+# sources/inbox/

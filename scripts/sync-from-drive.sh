@@ -5,9 +5,20 @@
 # - 변경 목록을 sources/CHANGES.md에 기록
 # 사용법: bash scripts/sync-from-drive.sh
 
-DRIVE_VAULT="G:/내 드라이브/obsidian/google-drive"
-SOURCES_DIR="C:/Users/etribe/Desktop/testspace/obsidian/sources/from-obsidian"
-CHANGES_FILE="C:/Users/etribe/Desktop/testspace/obsidian/sources/CHANGES.md"
+# .env 파일에서 경로 로드
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+ENV_FILE="$SCRIPT_DIR/../.env"
+
+if [ ! -f "$ENV_FILE" ]; then
+  echo "❌ .env 파일이 없어요. .env.example을 복사해서 만들어주세요:"
+  echo "   cp .env.example .env"
+  exit 1
+fi
+
+source "$ENV_FILE"
+
+SOURCES_DIR="$OBSIDIAN_DIR/sources/from-obsidian"
+CHANGES_FILE="$OBSIDIAN_DIR/sources/CHANGES.md"
 
 mkdir -p "$SOURCES_DIR"
 

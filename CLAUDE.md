@@ -12,14 +12,19 @@
 | `wiki/concepts/` | 개념, 이론, 알고리즘, 패턴, 프레임워크 |
 | `wiki/entities/` | 인물, 도구, 라이브러리, 프로젝트, 회사 |
 | `wiki/books/` | 책, 논문, 아티클 요약 |
-| `wiki/tech/` | 기술 노트, 코드 패턴, 아키텍처 결정, 설정 |
+| `wiki/tech/n8n/` | n8n 워크플로우, 노드 설정, 연동 패턴 |
+| `wiki/tech/ai/` | LLM, RAG, 임베딩, LangGraph, MCP, Claude |
+| `wiki/tech/frontend/` | React, Next.js, 상태관리, 렌더링, 성능 |
+| `wiki/tech/backend/` | API, DB, SQL, 인증, 보안, 결제 |
+| `wiki/tech/infra/` | Docker, Git, 모노레포, 개발환경 |
+| `wiki/tech/` (루트) | CS 기초, TypeScript 등 범용 기술 개념 |
 | `wiki/syntheses/` | 여러 개념을 연결하는 비교 분석, 크로스토픽 인사이트 |
 
 ---
 
 ## 절대 규칙
 
-1. `sources/` 폴더의 파일은 **절대 수정하지 말 것** (읽기 전용)
+1. 소스 파일(구글 드라이브 원본)은 **절대 수정하지 말 것** — wiki 페이지만 편집
 2. 링크는 항상 **표준 마크다운** 형식 사용: `[페이지명](../category/page.md)`
 3. Obsidian `[[wikilink]]` 형식 **사용 금지** (GitHub 렌더링 깨짐)
 4. 모든 ingest/query/lint 작업 후 `wiki/index.md`와 `wiki/log.md` 반드시 업데이트
@@ -46,7 +51,7 @@
 
 ## 출처
 
-- [소스명](../../sources/filename.md) — YYYY-MM-DD
+- 소스명 (구글 드라이브 원본 파일명) — YYYY-MM-DD
 ```
 
 ---
@@ -57,8 +62,18 @@
 
 1. `sources/CHANGES.md` 읽기 → 추가/수정/삭제된 파일 목록 확인
 2. **추가/수정된 파일만** ingest (아래 Ingest 워크플로 적용)
-3. **삭제된 파일**이 있으면 → 관련 wiki 페이지에서 해당 출처 제거
+3. **삭제된 파일**이 있으면 → 아래 삭제 처리 규칙 적용
 4. 완료 후 `sources/CHANGES.md` 삭제
+
+### 삭제 처리 규칙
+
+삭제된 소스 파일명으로 wiki 전체를 검색해서 해당 파일을 출처로 참조하는 페이지를 찾는다.
+
+**출처가 여러 개인 페이지** → 해당 출처 항목만 `## 출처`에서 제거. 페이지는 유지.
+
+**출처가 하나뿐인 페이지** → 다음 기준으로 판단:
+- 페이지 내용이 다른 wiki 페이지에서 이미 링크되거나 참조되고 있으면 → 페이지 유지, 출처만 제거
+- 어디서도 참조되지 않는 고아 페이지면 → 페이지 삭제 + `wiki/index.md`에서 항목 제거
 
 > 변경되지 않은 파일은 절대 재처리하지 말 것 — 시간 낭비이고 wiki가 오염됨
 
@@ -71,12 +86,19 @@
 반드시 이 순서로 실행:
 
 1. **읽기**: 소스 전체를 읽고 핵심 takeaway 3-5개 식별
+   > ⚠️ **보안 체크**: API 키, 비밀번호, 토큰처럼 보이는 문자열이 있으면 즉시 중단하고 사용자에게 알릴 것. 해당 파일은 ingest하지 말 것. (패턴: `sk-`, `Bearer `, `-----BEGIN`, 40자 이상 랜덤 문자열 등)
 2. **분류**: 어떤 카테고리의 페이지가 필요한지 판단
 3. **페이지 생성/업데이트** (목표: 10-15개):
    - 새 개념 등장 → `wiki/concepts/concept-name.md` 생성
    - 언급된 인물/도구/라이브러리 → `wiki/entities/name.md` 생성 또는 업데이트
    - 책/논문/아티클이면 → `wiki/books/title.md` 에 요약 생성
-   - 기술적 내용이면 → `wiki/tech/topic.md` 에 노트 생성
+   - 기술적 내용이면 → 아래 기준으로 서브폴더 선택:
+     - n8n 관련 → `wiki/tech/n8n/topic.md`
+     - LLM/AI/RAG/MCP 관련 → `wiki/tech/ai/topic.md`
+     - React/Next.js/프론트엔드 → `wiki/tech/frontend/topic.md`
+     - API/DB/인증/보안/결제 → `wiki/tech/backend/topic.md`
+     - Docker/Git/인프라/개발환경 → `wiki/tech/infra/topic.md`
+     - CS 기초, TypeScript 등 범용 → `wiki/tech/topic.md`
    - 여러 개념이 연결되면 → `wiki/syntheses/topic.md` 에 분석 생성
    > **기존 페이지 업데이트 시**: 기존 내용을 보존하고 새 정보를 추가하거나 수정할 것. 기존 내용을 삭제하지 말 것.
 4. **상호참조**: 새로 만들거나 수정한 페이지들을 서로 링크로 연결

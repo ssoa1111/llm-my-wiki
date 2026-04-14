@@ -1,0 +1,14 @@
+# .syncignore — sync에서 제외할 파일/폴더 패턴
+# 이 파일을 복사해서 .syncignore 로 사용하세요: Copy-Item .syncignore.example .syncignore
+# 경로의 일부만 매칭해도 제외됩니다 (대소문자 구분 없음)
+
+# 민감한 정보가 담긴 폴더
+# private/
+# secret/
+# credentials/
+
+# 특정 파일명 패턴
+# *api-key*
+# *password*
+# *token*
+# *secret*

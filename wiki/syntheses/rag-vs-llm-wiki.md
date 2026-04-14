@@ -17,7 +17,7 @@
 | 구현 복잡도 | 낮음 | 중간 (초기 설정 필요) |
 | 원본 충실도 | 높음 | 낮음 (LLM 합성 개입) |
 | 오류 위험 | 낮음 | 높음 (LLM 실수 가능) |
-| 플랫폼 | [벡터 데이터베이스](../tech/vector-database.md) | [Obsidian](../entities/obsidian.md) 등 파일 기반 |
+| 플랫폼 | [벡터 데이터베이스](../tech/ai/vector-database.md) | [Obsidian](../entities/obsidian.md) 등 파일 기반 |
 
 ### 언제 무엇을 선택할까?
 
@@ -41,7 +41,7 @@
 - [LLM Wiki](../concepts/llm-wiki.md) — 축적 기반 지식 관리 방식
 - [Andrej Karpathy](../entities/andrej-karpathy.md) — LLM Wiki 개념 제안자
 - [Vannevar Bush](../entities/vannevar-bush.md) — Memex로 역사적 맥락 제공
-- [벡터 데이터베이스](../tech/vector-database.md) — RAG의 핵심 인프라
+- [벡터 데이터베이스](../tech/ai/vector-database.md) — RAG의 핵심 인프라
 - [Obsidian](../entities/obsidian.md) — LLM Wiki의 이상적 플랫폼
 
 ## 출처

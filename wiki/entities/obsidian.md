@@ -23,7 +23,7 @@ Obsidian은 [LLM Wiki](../concepts/llm-wiki.md)의 이상적인 구현 환경이
 ## 관련 페이지
 
 - [LLM Wiki](../concepts/llm-wiki.md) — Obsidian을 플랫폼으로 활용하는 지식 관리 방식
-- [벡터 데이터베이스](../tech/vector-database.md) — RAG에서 Obsidian 역할에 해당하는 인프라
+- [벡터 데이터베이스](../tech/ai/vector-database.md) — RAG에서 Obsidian 역할에 해당하는 인프라
 
 ## 출처
 

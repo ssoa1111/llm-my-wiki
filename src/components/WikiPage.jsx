@@ -2,13 +2,13 @@ import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { Link } from 'react-router-dom'
 
-function resolveInternalLink(href, currentSlug) {
+function resolveInternalLink(href) {
   if (!href) return href
   if (href.startsWith('http')) return href
   if (!href.endsWith('.md')) return href
 
-  // Convert relative .md link to slug
-  const clean = href.replace(/^(\.\.\/)+[^/]+\//, '').replace('.md', '')
+  // ../concepts/rag.md → concepts/rag
+  const clean = href.replace(/^(\.\.\/)*/, '').replace('.md', '')
   return `#/page/${clean}`
 }
 

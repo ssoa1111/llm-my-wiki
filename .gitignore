@@ -4,6 +4,11 @@
 
 # 환경변수 (경로 등 로컬 설정)
 .env
+.syncignore
+
+# sync 내부 파일
+sources/.manifest
+sources/.last-sync
 
 # OS
 .DS_Store

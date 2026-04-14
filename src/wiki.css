@@ -83,6 +83,9 @@ body {
 .sidebar-section { margin-bottom: 20px; }
 
 .sidebar-category {
+  display: flex;
+  align-items: center;
+  gap: 4px;
   font-size: 11px;
   font-weight: 600;
   text-transform: uppercase;
@@ -91,6 +94,25 @@ body {
   margin-bottom: 6px;
   padding-bottom: 4px;
   border-bottom: 1px solid #eaecf0;
+  cursor: pointer;
+  user-select: none;
+}
+.sidebar-category:hover { color: #3366cc; }
+
+.sidebar-arrow {
+  font-size: 10px;
+  flex-shrink: 0;
+}
+
+.sidebar-count {
+  font-size: 10px;
+  font-weight: 400;
+  background: #eaecf0;
+  color: #555;
+  padding: 1px 6px;
+  border-radius: 8px;
+  letter-spacing: 0;
+  text-transform: none;
 }
 
 .sidebar-list { list-style: none; }

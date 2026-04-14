@@ -14,7 +14,7 @@ export default function Layout({ pages, children }) {
   return (
     <div className="wiki-root">
       <header className="wiki-header">
-        <Link to="/" className="wiki-logo">📚 LLM My Wiki</Link>
+        <Link to="/" className="wiki-logo">Garage</Link>
         <form onSubmit={handleSearch} className="wiki-search-form">
           <input
             value={query}

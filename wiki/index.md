@@ -3,7 +3,7 @@
 > Claude가 자동 관리하는 지식 카탈로그. 수동 편집 금지.
 
 **마지막 업데이트**: 2026-04-15  
-**총 페이지**: 81
+**총 페이지**: 95
 
 ---
 
@@ -39,7 +39,7 @@ _아직 없음_
 
 ---
 
-## Tech (62)
+## Tech (66)
 
 - [벡터 데이터베이스](./tech/ai/vector-database.md) — RAG의 핵심 인프라, 임베딩 벡터 저장 및 유사도 검색
 - [임베딩 모델](./tech/ai/embedding-models.md) — 텍스트를 벡터로 변환, OpenAI/Cohere/오픈소스 비교
@@ -103,11 +103,25 @@ _아직 없음_
 - [spec-kit — SDD 도구](./tech/infra/spec-kit.md) — GitHub의 의도 중심 개발 도구, 7단계 워크플로우
 - [개발 환경 에러 패턴](./tech/infra/dev-environment-errors.md) — CORS(file:// fetch), EPERM(.next 파일 잠금) 해결
 - [Playwright E2E 테스트](./tech/infra/playwright.md) — 설치, 테스트 플로우 7단계 체크리스트, DB 오염 방지 패턴
+- [Next.js fetch vs TanStack Query](./tech/frontend/nextjs-fetch-vs-tanstack.md) — 서버/클라이언트 캐시 차이, prefetch+HydrationBoundary, React.cache()
+- [Next.js Navigation Hooks](./tech/frontend/nextjs-navigation-hooks.md) — usePathname/useSearchParams/useRouter/useParams, 서버 컴포넌트 접근
+- [Zustand 완전 정리](./tech/frontend/zustand.md) — subscribe, persist/immer 미들웨어, 슬라이스 패턴
+- [Vue 3 완전 정리](./tech/frontend/vue3.md) — Composition API, Pinia, Vue Router, VeeValidate+Zod, TanStack Vue Query
 
 ---
 
-## Syntheses (3)
+## Syntheses (13)
 
 - [RAG vs LLM Wiki 비교](syntheses/rag-vs-llm-wiki.md) — 검색 중심 vs. 축적 중심 지식 관리 패러다임 상세 비교
 - [멀티에이전트 구조에서 고급 RAG 패턴 적용](syntheses/multi-agent-rag.md) — Main Agent = Adaptive RAG 라우터, Sub Agent = Corrective+Self-RAG 아키텍처
 - [DeepAgent vs LangChain vs LangGraph](syntheses/deepagent-langchain-langgraph.md) — 세 프레임워크의 계층 구조와 선택 기준
+- [Next.js 데이터 페칭 & 캐싱 전략 통합 가이드](syntheses/nextjs-data-fetching-caching.md) — 4개 캐싱 레이어·fetch vs TanStack Query·로딩 패턴을 하나의 의사결정 로드맵으로 통합
+- [신뢰할 수 있는 AI 에이전트 개발](syntheses/ai-agent-development.md) — 프롬프트 설계→고급 RAG→환각 방지→Skill 고도화의 4레이어 신뢰성 전략
+- [프론트엔드 상태 관리 계층화](syntheses/frontend-state-management.md) — Context(정적 전역) / Zustand(동적 전역) / TanStack Query(서버) 3계층 의사결정 가이드
+- [Next.js 보안 아키텍처](syntheses/nextjs-security-architecture.md) — Middleware 진입점 제어부터 JWT·Zod·XSS 방어까지 계층형 방어 전략 통합
+- [인증 & 권한 관리 통합](syntheses/auth-authorization.md) — JWT+HttpOnly 쿠키 세션 관리, Supabase RLS DB 권한, n8n 프록시 토큰 주입을 하나의 인증 아키텍처로 통합
+- [React 성능 최적화 — 메모이제이션부터 Core Web Vitals까지](syntheses/react-performance-memoization.md) — 리렌더링 진단·메모이제이션 의사결정·Core Web Vitals 측정을 진단→최적화→검증 사이클로 통합
+- [n8n 프로덕션 AI 워크플로 통합 가이드](syntheses/n8n-workflow-integration.md) — Docker+Cloudflare Tunnel 설정부터 AI Agent·벡터 검색·챗봇 인증·이미지 처리·Google Sheets를 조합하는 프로덕션 파이프라인 가이드
+- [RAG 품질 & 성능 최적화 실전 가이드](syntheses/rag-quality-performance.md) — 벡터 DB 선택·유사도 측정·검색 정확성·속도 최적화를 단계별로 연결하는 실전 RAG 구축 가이드
+- [JavaScript 동작 원리 3대 핵심](syntheses/javascript-core-concepts.md) — 클로저(렉시컬 스코프)·프로토타입(상속)·이벤트 루프(비동기)가 실제 코드에서 어떻게 함께 작동하는지 통합 분석
+- [Next.js 렌더링 전략과 SEO](syntheses/rendering-strategy-seo.md) — 콘텐츠 특성에 따른 SSG/ISR/SSR/CSR 선택, 캐싱 연동, generateMetadata, Core Web Vitals 통합 의사결정 가이드

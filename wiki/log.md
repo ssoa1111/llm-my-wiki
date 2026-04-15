@@ -5,6 +5,22 @@
 
 ---
 
+[2026-04-15 16:00] [QUERY] Next.js 보안 아키텍처 synthesis — Middleware·JWT·보안헤더·Zod·스크립트보안 계층 통합
+  참조 페이지: tech/frontend/nextjs-middleware-context.md, tech/backend/jwt-auth-nextjs.md, tech/backend/security-headers.md, tech/backend/script-security.md, tech/backend/zod-validation.md
+  답변 저장: syntheses/nextjs-security-architecture.md
+  핵심 takeaway: Next.js 보안은 ① Middleware 진입점 제어(Edge Runtime, 쿠키 보존 패턴) → ② next.config.js 응답 헤더(CSP/HSTS/X-Frame-Options) → ③ JWT+HttpOnly 쿠키 토큰 관리(JWKS 분산 검증) → ④ Zod 서버사이드 입력 검증 → ⑤ XSS·CSRF·SRI 스크립트 보안의 5계층 방어 전략으로 통합
+
+[2026-04-15 15:00] [QUERY] Next.js 데이터 페칭 & 캐싱 전략 통합 (4개 레이어 + fetch vs TanStack + 로딩 패턴)
+  참조 페이지: tech/frontend/nextjs-caching.md, tech/frontend/nextjs-fetch-vs-tanstack.md, tech/frontend/loading-strategy.md, tech/frontend/tanstack-query-config.md
+  답변 저장: syntheses/nextjs-data-fetching-caching.md
+  핵심 takeaway: Request Memoization/Data Cache/Full Route Cache/Router Cache 4레이어 전체 지도; fetch=서버 캐시(유저 간 공유) vs TanStack=클라이언트 캐시(유저별 독립) 이분법; useQuery/useSuspenseQuery+Suspense/prefetch+HydrationBoundary 3가지 로딩 패턴 선택 기준 통합; staleTime=0 시 hydration 직후 즉시 refetch 주의사항 포함
+
+[2026-04-15 14:30] [INGEST] Next.js fetch/TanStack 비교, Navigation Hooks, Zustand, Vue 3 (Google Drive: 12. Next/Next.js fetch vs TanStack Query.md, Next.js Navigation Hooks.md, Zustand 정리.md, 16. vue/Vue 3 완전 정리 가이드.md)
+  생성: tech/frontend/nextjs-fetch-vs-tanstack.md, tech/frontend/nextjs-navigation-hooks.md, tech/frontend/zustand.md, tech/frontend/vue3.md
+  업데이트: tech/frontend/tanstack-query-config.md (nextjs-fetch-vs-tanstack 역링크), tech/frontend/context-zustand.md (zustand 역링크)
+  스킵: 05. git/깃 토큰.md (git-workflow.md에 이미 반영)
+  핵심 takeaway: Next.js fetch(서버 캐시, 유저 간 공유) vs TanStack Query(브라우저 캐시, 유저별 독립) — prefetch+HydrationBoundary로 SSR+클라이언트 캐시 동시 활용; Navigation Hooks 4종(usePathname/useSearchParams/useRouter/useParams) App Router 완전 정리; Zustand subscribe 5가지 패턴(Canvas/분석/디바운싱/연쇄/애니메이션) + immer + 슬라이스 패턴; Vue 3 Composition API 전체 + Pinia + VeeValidate+Zod 폼
+
 [2026-04-15 10:00] [INGEST] JS 지연평가 + Playwright 테스트 (Google Drive: 01. JS/2025-05-21.md, 14. 테스터기/01. Playwright/무제.md)
   생성: concepts/lazy-evaluation.md, tech/infra/playwright.md
   업데이트: concepts/event-loop.md (지연평가 역링크 추가), concepts/closure.md (지연평가 역링크 추가), tech/infra/dev-environment-errors.md (Playwright 역링크 추가)
@@ -73,7 +89,46 @@
   수정된 페이지: concepts/rag.md, concepts/llm-wiki.md, entities/andrej-karpathy.md, entities/obsidian.md, entities/vannevar-bush.md, syntheses/rag-vs-llm-wiki.md, tech/ai/vector-database.md, tech/backend/http-status-codes.md, tech/frontend/tanstack-query-config.md
   조치: 소스 링크 7개 → 텍스트로 변환, REST API 링크 경로 수정, TanStack 소스 링크 → 텍스트로 변환
 
+[2026-04-15 16:00] [QUERY] 신뢰할 수 있는 AI 에이전트 개발 — 프롬프트·RAG·환각 방지·Skill 4레이어 통합 전략
+  참조 페이지: concepts/prompt-engineering.md, tech/ai/hallucination-prevention.md, concepts/advanced-rag.md, tech/ai/claude-skill-creation.md
+  답변 저장: syntheses/ai-agent-development.md
+
+[2026-04-15 17:00] [QUERY] 프론트엔드 상태 관리 3계층 패턴 — Context / Zustand / TanStack Query 의사결정 가이드
+  참조 페이지: tech/frontend/state-management.md, tech/frontend/context-zustand.md, tech/frontend/zustand.md, tech/frontend/tanstack-query-config.md
+  답변 저장: syntheses/frontend-state-management.md
+  핵심 takeaway: CoT/ReAct 프롬프트로 사고 구조 강제 → Adaptive/Corrective/Self-RAG로 검색 정확도 향상 → 생성 단계 분리+출력 검증으로 환각률 20-30%→<5% 감소 → Claude Skill 8단계로 에이전트 시스템 수준 신뢰성 확보
+
+[2026-04-15 18:00] [QUERY] 인증 & 권한 관리 통합 — JWT, Supabase RLS, n8n 프록시 패턴 크로스토픽 synthesis
+  참조 페이지: tech/backend/jwt-auth-nextjs.md, tech/backend/supabase-nextjs.md, tech/n8n/n8n-chatbot-auth.md
+  답변 저장: syntheses/auth-authorization.md
+  핵심 takeaway: HttpOnly 쿠키 기반 JWT+Refresh 토큰 세션 관리 → Supabase RLS로 DB 행 단위 권한 제어 → n8n 같은 외부 서비스에 Next.js API Route 프록시로 Basic Auth + supabaseAccessToken 주입 — 세 레이어가 하나의 일관된 권한 모델로 통합됨. 어떤 상황에서 어떤 인증 패턴을 쓰는가 의사결정 표 포함.
+
 [2026-04-10 00:00] [INGEST] RAG vs LLM Wiki: 지식 관리의 두 가지 접근법 (sources/sample-rag-vs-wiki.md)
   생성: concepts/rag.md, concepts/llm-wiki.md, entities/andrej-karpathy.md, entities/vannevar-bush.md, entities/obsidian.md, tech/vector-database.md, syntheses/rag-vs-llm-wiki.md
   업데이트: (없음)
   핵심 takeaway: RAG는 원본 문서를 벡터 DB로 검색하는 방식, LLM Wiki는 LLM이 직접 지식을 합성·축적하는 방식으로 서로 보완적 패러다임이며, Karpathy가 제안한 LLM Wiki는 Vannevar Bush의 Memex 비전을 AI로 구현한 것
+
+[2026-04-15 17:00] [QUERY] React 성능 최적화 — 메모이제이션부터 Core Web Vitals까지
+  참조 페이지: tech/frontend/react-rendering-optimization.md, tech/frontend/usememo-usecallback-reactmemo.md, tech/frontend/performance-measurement.md, tech/frontend/performance-checklist.md
+  답변 저장: syntheses/react-performance-memoization.md
+  핵심 takeaway: 메모이제이션(useMemo/useCallback/React.memo) 의사결정 흐름도 포함; Profiler 기반 진단→구조개선+메모이제이션→LCP/CLS/INP 최적화→검증 사이클 통합; React 19 Compiler 방향성 및 남용 금지 기준 정리
+
+[2026-04-15 19:00] [QUERY] JavaScript 3대 핵심 개념 통합 — 클로저·프로토타입·이벤트 루프
+  참조 페이지: concepts/closure.md, concepts/prototype.md, concepts/event-loop.md
+  답변 저장: syntheses/javascript-core-concepts.md
+  핵심 takeaway: 렉시컬 스코프(클로저) + [[Prototype]] 체인(상속) + Call Stack/Task Queue(비동기) 세 개념이 하나의 실행 모델에서 맞물림; 비동기 콜백에서의 Stale Closure, 프로토타입 메서드의 this 바인딩 소실, 반복문+setTimeout 함정이 세 개념의 교차점에서 발생하는 버그임을 통합 예제로 설명
+
+[2026-04-15 20:00] [QUERY] n8n 프로덕션 AI 워크플로 통합 가이드 synthesis — 7개 n8n 페이지 크로스토픽 통합
+  참조 페이지: tech/n8n/n8n-local-setup.md, tech/n8n/n8n-supabase-vector.md, tech/n8n/n8n-chatbot-auth.md, tech/n8n/n8n-ai-agent.md, tech/n8n/n8n-image-compress.md, tech/n8n/n8n-image-generation.md, tech/n8n/n8n-google-sheets.md
+  답변 저장: syntheses/n8n-workflow-integration.md
+  핵심 takeaway: Docker+Cloudflare Tunnel 환경 → AI Agent System Message 5원칙(날짜 주입/도구순서/분기/동의/역할 요약) → Supabase pgvector 연동(방식 A 권장, RPC JSON 형식 주의) → Next.js 프록시로 Basic Auth+Supabase token 주입(NEXT_PUBLIC_ 금지, Brotli 차단) → TinyPNG 압축(평균 60-70% 감소)→OpenAI/Gemini 이미지 생성 파이프라인 → Google Sheets 서비스 계정 방식(n8n 업데이트 환경에서 OAuth2 대신) — 6단계를 조합하면 RAG 챗봇·이미지 처리·데이터 자동화 파이프라인 구성 가능
+
+[2026-04-15 21:00] [QUERY] RAG 품질 & 성능 최적화 실전 가이드 synthesis — 벡터 DB·유사도·검색 정확성·속도 5개 페이지 통합
+  참조 페이지: tech/ai/rag-search-mechanism.md, tech/ai/vector-db-comparison.md, tech/ai/embedding-search-accuracy.md, tech/ai/rag-speed-optimization.md, tech/ai/vector-similarity.md
+  답변 저장: syntheses/rag-quality-performance.md
+  핵심 takeaway: pgvector(무료·<10만 문서)→Qdrant(10-100만)→Pinecone(100만+) 규모별 선택; 코사인 유사도 90% 표준(텍스트 검색에서 방향=의미 비교); Confidence 레벨(≥0.7/0.5/0.3/<0.3) 기반 Multi-Step 재검색 전략으로 False Negative 방지; 병렬처리+캐싱+경량모델로 10-15초→4-6초(60%) 단축; 4단계 진화 경로(pgvector+기본→하이브리드→병렬최적화→Qdrant/Pinecone)로 오버엔지니어링 없는 점진적 고도화
+
+[2026-04-15 22:00] [QUERY] Next.js 렌더링 전략과 SEO — 렌더링·캐싱·메타데이터·Core Web Vitals 통합 의사결정 가이드
+  참조 페이지: concepts/ssr-ssg-isr-csr.md, tech/frontend/nextjs-image-metadata-seo.md, tech/frontend/nextjs-caching.md, tech/frontend/performance-measurement.md
+  답변 저장: syntheses/rendering-strategy-seo.md
+  핵심 takeaway: 페이지 콘텐츠 특성(정적/주기적 변경/요청마다 다름/인증)에 따라 SSG→ISR→SSR→CSR 순서로 전략 선택; 각 렌더링 전략이 Full Route Cache/Data Cache/Request Memoization/Router Cache 4레이어와 1:1 대응; generateMetadata의 fetch는 Request Memoization으로 페이지 본문 fetch와 공유되어 추가 비용 없음; LCP≤2.5s는 SSG/ISR CDN+Image priority, CLS≤0.1은 width/height 명시+blur placeholder, INP≤200ms는 번들 스플리팅+Long Task 분리로 달성

@@ -159,6 +159,7 @@ export const CounterStoreProvider = ({ children }: { children: React.ReactNode }
 - [프론트엔드 상태 관리](./state-management.md) — 전체 상태 관리 솔루션 비교
 - [React 렌더링 최적화](./react-rendering-optimization.md) — Context 리렌더링 최적화
 - [SSR/SSG/ISR/CSR](../../concepts/ssr-ssg-isr-csr.md) — App Router에서의 상태 관리
+- [Zustand 완전 정리](./zustand.md) — subscribe, immer, 슬라이스 패턴 등 Zustand 심화
 
 ## 출처
 

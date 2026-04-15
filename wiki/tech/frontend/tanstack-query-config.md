@@ -223,6 +223,7 @@ onMutate → 낙관적 업데이트 + 스냅샷
 - [React Query 로딩 전략](./loading-strategy.md) — useQuery vs Suspense vs 서버 프리패칭
 - [useEffect](./use-effect.md) — fetch + AbortController, Promise.all vs allSettled
 - [프론트엔드 실전 에러 패턴](./frontend-error-patterns.md) — React Hook Form, Zustand 초기화
+- [Next.js fetch vs TanStack Query](./nextjs-fetch-vs-tanstack.md) — Server Component fetch와의 캐싱 비교
 
 ## 출처
 

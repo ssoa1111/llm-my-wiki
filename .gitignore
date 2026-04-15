@@ -18,3 +18,5 @@ Thumbs.db
 # sources/inbox/
 node_modules/
 dist/
+
+.claude

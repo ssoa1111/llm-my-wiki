@@ -131,6 +131,7 @@ for (var i = 0; i < 3; i++) {
 - [프로토타입](../concepts/prototype.md) — 클로저와 함께 JavaScript 핵심 개념
 - [이벤트 루프와 비동기](../concepts/event-loop.md) — 비동기 콜백과 클로저의 관계
 - [useEffect](../tech/frontend/use-effect.md) — React hook의 stale closure 문제
+- [지연평가](../concepts/lazy-evaluation.md) — 렉시컬 환경과 지연실행 패턴
 
 ## 출처
 

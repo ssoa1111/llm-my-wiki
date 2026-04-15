@@ -2,12 +2,12 @@
 
 > Claude가 자동 관리하는 지식 카탈로그. 수동 편집 금지.
 
-**마지막 업데이트**: 2026-04-14  
-**총 페이지**: 78
+**마지막 업데이트**: 2026-04-15  
+**총 페이지**: 81
 
 ---
 
-## Concepts (9)
+## Concepts (10)
 
 - [RAG](concepts/rag.md) — 쿼리 시점에 벡터 DB에서 문서를 검색해 LLM 컨텍스트로 제공하는 방식
 - [LLM Wiki](concepts/llm-wiki.md) — LLM이 직접 마크다운 위키를 작성·유지하며 지식을 복리로 축적하는 방식
@@ -18,6 +18,7 @@
 - [이벤트 루프와 비동기](concepts/event-loop.md) — JavaScript 단일 스레드에서 비동기 작업(Macro/Microtask Queue)을 처리하는 메커니즘
 - [프로토타입](concepts/prototype.md) — JavaScript 상속 메커니즘, 모든 객체는 프로토타입 체인으로 속성·메서드를 공유
 - [SSR/SSG/ISR/CSR](concepts/ssr-ssg-isr-csr.md) — Next.js 4가지 렌더링 전략, 콘텐츠 특성과 성능 요구에 따라 선택
+- [지연평가 (Lazy Evaluation)](concepts/lazy-evaluation.md) — Iterator Helpers API로 필요한 원소만 계산, .take()로 조기 중단
 
 ---
 
@@ -38,7 +39,7 @@ _아직 없음_
 
 ---
 
-## Tech (60)
+## Tech (62)
 
 - [벡터 데이터베이스](./tech/ai/vector-database.md) — RAG의 핵심 인프라, 임베딩 벡터 저장 및 유사도 검색
 - [임베딩 모델](./tech/ai/embedding-models.md) — 텍스트를 벡터로 변환, OpenAI/Cohere/오픈소스 비교
@@ -84,6 +85,7 @@ _아직 없음_
 - [Next.js 환경변수 관리](./tech/frontend/nextjs-env-vars.md) — NEXT_PUBLIC_ 규칙, .env 우선순위, 민감 정보 분류
 - [REST API 규약](./tech/backend/rest-api-conventions.md) — URL 명사화·복수형·하이픈, HTTP 메서드, 버전 관리
 - [React Query 로딩 전략](./tech/frontend/loading-strategy.md) — useQuery vs Suspense vs 서버 프리패칭+HydrationBoundary
+- [TanStack Query 설정 & 고급 패턴](./tech/frontend/tanstack-query-config.md) — staleTime/gcTime, Optimistic Update, Mutation 패턴, 에러 핸들링
 - [LangGraph 아키텍처 핵심 개념](./tech/ai/langgraph-architecture.md) — Node/Edge/State/순환 구조/비동기 처리
 - [Next.js 국제화 (next-intl)](./tech/frontend/nextjs-i18n.md) — [locale] 라우팅, 번역 JSON, Middleware 언어 감지
 - [n8n AI Agent 노드 설정](./tech/n8n/n8n-ai-agent.md) — System Message 설계, Chat Trigger 공개, metadata 전달 방법
@@ -100,6 +102,7 @@ _아직 없음_
 - [MCP 서버 개발](./tech/ai/mcp-server-development.md) — TypeScript MCP 서버 구현, 임베딩+웹 검색 fallback 패턴
 - [spec-kit — SDD 도구](./tech/infra/spec-kit.md) — GitHub의 의도 중심 개발 도구, 7단계 워크플로우
 - [개발 환경 에러 패턴](./tech/infra/dev-environment-errors.md) — CORS(file:// fetch), EPERM(.next 파일 잠금) 해결
+- [Playwright E2E 테스트](./tech/infra/playwright.md) — 설치, 테스트 플로우 7단계 체크리스트, DB 오염 방지 패턴
 
 ---
 

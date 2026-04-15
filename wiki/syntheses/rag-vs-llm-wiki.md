@@ -46,4 +46,4 @@
 
 ## 출처
 
-- [RAG vs LLM Wiki: 지식 관리의 두 가지 접근법](../../sources/sample-rag-vs-wiki.md) — 2026-04-10
+- RAG vs LLM Wiki: 지식 관리의 두 가지 접근법 — 2026-04-10

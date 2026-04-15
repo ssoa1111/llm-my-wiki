@@ -36,7 +36,13 @@ function parsePage(filePath, rawContent) {
     links.push(resolveLinkSlug(slug, href))
   }
 
-  return { slug, category, subcategory, name, title, summary, content, links }
+  // 이미 별도 렌더링하는 제목/요약 줄을 content에서 제거
+  let body = content
+  if (titleMatch) body = body.replace(titleMatch[0], '')
+  if (summaryMatch) body = body.replace(summaryMatch[0], '')
+  body = body.replace(/^\n+/, '') // 앞쪽 빈 줄 정리
+
+  return { slug, category, subcategory, name, title, summary, content: body, links }
 }
 
 export function useWiki() {

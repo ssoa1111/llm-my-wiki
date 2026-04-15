@@ -72,6 +72,7 @@ Remove-Item -LiteralPath ".next" -Recurse -Force -Verbose
 
 - [Docker](./docker.md) — 로컬 개발 환경 컨테이너화로 프로세스 충돌 방지
 - [n8n 트러블슈팅](../n8n/n8n-troubleshooting.md) — 개발 환경 에러 패턴
+- [Playwright E2E 테스트](./playwright.md) — 테스트 환경 CORS, DB 오염 방지 패턴
 
 ## 출처
 

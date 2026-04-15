@@ -127,6 +127,7 @@ const c = await getEvenMore(b)
 - [useEffect](../tech/frontend/use-effect.md) — React에서 비동기 Effect 처리
 - [클로저](../concepts/closure.md) — 비동기 콜백에서 자주 등장하는 개념
 - [Node Runtime & Edge Runtime](../tech/frontend/node-edge-runtime.md) — 런타임 환경 차이
+- [지연평가](../concepts/lazy-evaluation.md) — Iterator로 불필요한 연산을 건너뛰는 JS 패턴
 
 ## 출처
 

@@ -1,6 +1,26 @@
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
+import rehypeHighlight from 'rehype-highlight'
 import { Link } from 'react-router-dom'
+import 'highlight.js/styles/github.css'
+
+const CATEGORY_LABELS = {
+  concepts:        '개념',
+  entities:        '인물 · 도구',
+  books:           '책 · 논문',
+  'tech/n8n':      '기술 · n8n',
+  'tech/ai':       '기술 · AI',
+  'tech/frontend': '기술 · 프론트엔드',
+  'tech/backend':  '기술 · 백엔드',
+  'tech/infra':    '기술 · 인프라',
+  tech:            '기술 · 기타',
+  syntheses:       '분석',
+}
+
+function getCategoryLabel(page) {
+  const key = page.subcategory ? `tech/${page.subcategory}` : page.category
+  return CATEGORY_LABELS[key] || key
+}
 
 function resolveInternalLink(href, currentSlug) {
   if (!href) return href
@@ -27,11 +47,13 @@ export default function WikiPage({ pages, slug }) {
 
   return (
     <article className="wiki-article">
+      <div className="wiki-category-badge">{getCategoryLabel(page)}</div>
       <h1 className="wiki-title">{page.title}</h1>
       {page.summary && <p className="wiki-summary">{page.summary}</p>}
       <div className="wiki-body-text">
         <ReactMarkdown
           remarkPlugins={[remarkGfm]}
+          rehypePlugins={[[rehypeHighlight, { detect: true }]]}
           components={{
             a({ href, children }) {
               const resolved = resolveInternalLink(href, page.slug)

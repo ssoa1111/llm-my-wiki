@@ -5,6 +5,16 @@
 
 ---
 
+[2026-04-15 10:00] [INGEST] JS 지연평가 + Playwright 테스트 (Google Drive: 01. JS/2025-05-21.md, 14. 테스터기/01. Playwright/무제.md)
+  생성: concepts/lazy-evaluation.md, tech/infra/playwright.md
+  업데이트: concepts/event-loop.md (지연평가 역링크 추가), concepts/closure.md (지연평가 역링크 추가), tech/infra/dev-environment-errors.md (Playwright 역링크 추가)
+  핵심 takeaway: JS Iterator Helpers API(.values().filter().map().take().toArray()) 지연평가 패턴 — take(n) 충족 시 즉시 중단으로 즉시평가 대비 불필요한 연산 제거; Playwright 7단계 플로우 설계(기능/시작페이지/행동순서/입력데이터/검증/예외/특수요구사항) + DB 오염 방지 beforeEach/afterEach 패턴
+
+[2026-04-14 15:00] [INGEST] TanStack Query 설정 (Google Drive: 2. study/1. stack/12. Next)
+  생성: tech/frontend/tanstack-query-config.md
+  업데이트: (없음)
+  핵심 takeaway: QueryClient 전역 설정(staleTime/gcTime/retry/refetchOnWindowFocus), staleTime vs gcTime 생애주기 다이어그램, enabled/select/refetchInterval 쿼리 옵션, initialData vs placeholderData 차이, Optimistic Update(cancelQueries→snapshot→setQueryData→rollback→onSettled), throwOnError vs QueryCache.onError 에러 전략, ReactQueryDevtools
+
 [2026-04-14 14:00] [INGEST] 미싱 파일 배치 (Google Drive: Docker/Supabase/Claude Code/RAG/에러일기/AI/spec-kit)
   생성: tech/claude-code-commands.md, tech/rag-python-implementation.md, tech/frontend-error-patterns.md, tech/mcp-server-development.md, tech/spec-kit.md, tech/dev-environment-errors.md
   업데이트: tech/docker.md (CLI+Volume+Dockerfile+Compose+EC2 전면 확장), tech/n8n-supabase-vector.md (metadata filter 섹션 추가), tech/n8n-ga4-analysis.md (GA4 API 쿼터 추가), tech/orchestrator-architecture.md (스킬 체이닝+HITL+에이전트 tool 선택 기준 추가), tech/zod-validation.md (배열+useFieldArray+enum주의 추가), tech/monorepo-turborepo.md (pnpm catalog+Tailwind 경로 추가), concepts/prompt-engineering.md (Transformer/BERT/GPT/T5/temperature/프롬프트 템플릿 추가), tech/vector-database.md (임베딩 벡터 개념+FAISS/pgvector 추가), tech/git-workflow.md (토큰 갱신 추가), tech/use-effect.md (AbortController+Promise.all vs allSettled 추가)
@@ -50,6 +60,18 @@
   업데이트: concepts/rag.md (고급 RAG 링크 추가), tech/vector-database.md (관련 페이지 보강)
   핵심 takeaway: AI/RAG 심화 지식(고급 RAG 패턴 3종, 청킹, 임베딩, LangGraph/LangChain 비교, 오케스트레이터 아키텍처)과 실무 패턴(Next.js 중앙 에러 처리, Docker, n8n, Claude Code Skill/Subagent/Command)을 체계화
   스킵한 카테고리: TODO 목록, 회의록, 기획 문서, Obsidian 플러그인 README (위키 가치 낮음)
+
+[2026-04-15 00:00] [LINT]
+  이슈: 9개 발견
+  - 깨진 링크 9개:
+    - 7개 페이지의 ## 출처에 sources/sample-rag-vs-wiki.md 링크 (파일 없음)
+      → concepts/rag.md, concepts/llm-wiki.md, entities/andrej-karpathy.md, entities/obsidian.md, entities/vannevar-bush.md, syntheses/rag-vs-llm-wiki.md, tech/ai/vector-database.md
+    - tech/backend/http-status-codes.md → ../rest-api.md (존재하지 않는 경로, 실제 파일: tech/backend/rest-api-conventions.md)
+    - tech/frontend/tanstack-query-config.md → sources/from-obsidian/.../TanStack Query 설정.md (파일 없음)
+  - 고아 페이지: 0개
+  - 누락 인덱스: 0개
+  수정된 페이지: concepts/rag.md, concepts/llm-wiki.md, entities/andrej-karpathy.md, entities/obsidian.md, entities/vannevar-bush.md, syntheses/rag-vs-llm-wiki.md, tech/ai/vector-database.md, tech/backend/http-status-codes.md, tech/frontend/tanstack-query-config.md
+  조치: 소스 링크 7개 → 텍스트로 변환, REST API 링크 경로 수정, TanStack 소스 링크 → 텍스트로 변환
 
 [2026-04-10 00:00] [INGEST] RAG vs LLM Wiki: 지식 관리의 두 가지 접근법 (sources/sample-rag-vs-wiki.md)
   생성: concepts/rag.md, concepts/llm-wiki.md, entities/andrej-karpathy.md, entities/vannevar-bush.md, entities/obsidian.md, tech/vector-database.md, syntheses/rag-vs-llm-wiki.md

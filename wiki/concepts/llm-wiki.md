@@ -36,4 +36,4 @@ LLM Wiki는 [RAG](../concepts/rag.md)의 단순 검색-생성 패턴을 넘어, 
 
 ## 출처
 
-- [RAG vs LLM Wiki: 지식 관리의 두 가지 접근법](../../sources/sample-rag-vs-wiki.md) — 2026-04-10
+- RAG vs LLM Wiki: 지식 관리의 두 가지 접근법 — 2026-04-10

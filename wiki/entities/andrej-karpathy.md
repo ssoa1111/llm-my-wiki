@@ -21,4 +21,4 @@ Karpathy는 LLM이 단순히 정보를 검색·생성하는 데 그치지 않고
 
 ## 출처
 
-- [RAG vs LLM Wiki: 지식 관리의 두 가지 접근법](../../sources/sample-rag-vs-wiki.md) — 2026-04-10
+- RAG vs LLM Wiki: 지식 관리의 두 가지 접근법 — 2026-04-10

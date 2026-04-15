@@ -53,7 +53,7 @@
 
 ## 관련 페이지
 
-- [REST API 규약](../rest-api.md) — 각 HTTP 메서드와 상태코드 조합 규칙
+- [REST API 규약](../backend/rest-api-conventions.md) — 각 HTTP 메서드와 상태코드 조합 규칙
 - [중앙 집중식 에러 처리](./centralized-error-handling.md) — 상태코드별 에러 핸들링 패턴
 - [JWT 인증 — Next.js 구현](./jwt-auth-nextjs.md) — 401/403 처리 패턴
 

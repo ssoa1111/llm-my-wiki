@@ -2,6 +2,21 @@
 
 > API fetch → TanStack Query → ErrorBoundary → error.tsx → window 이벤트까지 5계층 방어선을 하나의 아키텍처로 통합
 
+## 목차
+
+- [전체 구조 — 5계층 + 404](#전체-구조--5계층--404)
+- [Level 1: API Fetch Wrapper](#level-1-api-fetch-wrapper)
+- [Level 2: TanStack Query 전역 핸들러](#level-2-tanstack-query-전역-핸들러)
+- [Level 3: ErrorBoundary](#level-3-errorboundary)
+- [Level 4: error.tsx / global-error.tsx](#level-4-errortsx--global-errortsx)
+- [Level 5: window 이벤트 (최후 방어선)](#level-5-window-이벤트-최후-방어선)
+- [404 처리 — not-found.tsx / [...not_found]](#404-처리--not-foundtsx--not_found)
+- [중앙 에러 핸들러 구현](#중앙-에러-핸들러-구현)
+- [의사결정 트리](#의사결정-트리)
+- [전체 파일 구조](#전체-파일-구조)
+
+---
+
 ## 핵심 내용
 
 ### 전체 구조 — 5계층 + 404

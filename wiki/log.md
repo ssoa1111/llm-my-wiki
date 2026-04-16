@@ -128,6 +128,12 @@
   답변 저장: syntheses/rag-quality-performance.md
   핵심 takeaway: pgvector(무료·<10만 문서)→Qdrant(10-100만)→Pinecone(100만+) 규모별 선택; 코사인 유사도 90% 표준(텍스트 검색에서 방향=의미 비교); Confidence 레벨(≥0.7/0.5/0.3/<0.3) 기반 Multi-Step 재검색 전략으로 False Negative 방지; 병렬처리+캐싱+경량모델로 10-15초→4-6초(60%) 단축; 4단계 진화 경로(pgvector+기본→하이브리드→병렬최적화→Qdrant/Pinecone)로 오버엔지니어링 없는 점진적 고도화
 
+[2026-04-16 14:55] [INGEST] 기초 CS (2. study/3. cs/기초 CS.md)
+  생성: (없음)
+  업데이트: tech/cs-fundamentals.md (DNS 조회 7단계, OSI 7계층, TCP vs UDP 추가 + 출처 업데이트)
+  삭제 처리: 2. study/1. stack/12. Next/기초 CS.md → cs-fundamentals.md의 출처가 해당 파일이었으나 새 파일로 내용 보완 및 출처 교체, 페이지 유지
+  핵심 takeaway: DNS 조회 7단계(URL파싱→DNS→TCP 3-way handshake→TLS→HTTP요청→서버응답→렌더링) 전체 흐름; OSI 7계층(물리→데이터링크→네트워크→전송→세션→표현→응용) + 대표 기술; TCP(신뢰성·순서보장·느림) vs UDP(빠름·손실가능·스트리밍·게임)
+
 [2026-04-16 13:36] [INGEST] Supabase + Toss Payments 연동 완전 정리
   생성: tech/backend/supabase-toss-payments.md
   업데이트: tech/backend/payment-system.md (supabase-toss-payments 역링크 추가)

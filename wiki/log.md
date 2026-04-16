@@ -128,6 +128,11 @@
   답변 저장: syntheses/rag-quality-performance.md
   핵심 takeaway: pgvector(무료·<10만 문서)→Qdrant(10-100만)→Pinecone(100만+) 규모별 선택; 코사인 유사도 90% 표준(텍스트 검색에서 방향=의미 비교); Confidence 레벨(≥0.7/0.5/0.3/<0.3) 기반 Multi-Step 재검색 전략으로 False Negative 방지; 병렬처리+캐싱+경량모델로 10-15초→4-6초(60%) 단축; 4단계 진화 경로(pgvector+기본→하이브리드→병렬최적화→Qdrant/Pinecone)로 오버엔지니어링 없는 점진적 고도화
 
+[2026-04-16 13:36] [INGEST] Supabase + Toss Payments 연동 완전 정리
+  생성: tech/backend/supabase-toss-payments.md
+  업데이트: tech/backend/payment-system.md (supabase-toss-payments 역링크 추가)
+  핵심 takeaway: "금액 계산은 서버에서만" 원칙 — 주문 생성 시 서버가 원가 조회+쿠폰 검증+final_amount 계산 후 DB 저장; PostgreSQL confirm_payment 함수(FOR UPDATE 락)로 중복 결제·Race Condition·쿠폰 중복 원자적 방지; Toss API는 외부라 트랜잭션 밖 → 실패 시 보상 트랜잭션(Compensating Transaction)으로 DB 롤백; pg_cron으로 30분 이상 pending 자동 expired 처리 + 쿠폰/재고 복구
+
 [2026-04-16 10:47] [INGEST] 하네스 엔지니어링 Codex 아티클 + TanStack Query gcTime 보완 (sources/CHANGES.md 증분 ingest)
   생성: tech/ai/codex-harness-engineering.md
   업데이트: tech/frontend/tanstack-query-config.md (gcTime/staleTime 시나리오 요약표 + "gcTime ≥ staleTime" 설정 원칙 추가)

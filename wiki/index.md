@@ -3,7 +3,7 @@
 > Claude가 자동 관리하는 지식 카탈로그. 수동 편집 금지.
 
 **마지막 업데이트**: 2026-04-16  
-**총 페이지**: 96
+**총 페이지**: 97
 
 ---
 
@@ -39,7 +39,7 @@ _아직 없음_
 
 ---
 
-## Tech (67)
+## Tech (68)
 
 - [벡터 데이터베이스](./tech/ai/vector-database.md) — RAG의 핵심 인프라, 임베딩 벡터 저장 및 유사도 검색
 - [임베딩 모델](./tech/ai/embedding-models.md) — 텍스트를 벡터로 변환, OpenAI/Cohere/오픈소스 비교
@@ -80,6 +80,7 @@ _아직 없음_
 - [Claude Skill 만들기 팁](./tech/ai/claude-skill-creation.md) — 8단계 프롬프트로 스킬 문서 점진적 고도화
 - [모노레포 — Turborepo 기초](./tech/infra/monorepo-turborepo.md) — pnpm workspace + tsconfig 경로 별칭 설정
 - [결제 시스템](./tech/backend/payment-system.md) — PG사 SDK 결제창, 서버 금액 검증, 중복 결제 방지
+- [Supabase + Toss Payments 연동](./tech/backend/supabase-toss-payments.md) — Toss 결제 DB 설계·트랜잭션·쿠폰·pending 만료·보상 트랜잭션 패턴
 - [n8n Chatbot 인가](./tech/n8n/n8n-chatbot-auth.md) — Basic Auth + Supabase 토큰 주입 Next.js 프록시 패턴
 - [Git 워크플로우](./tech/infra/git-workflow.md) — git stash로 작업 임시 저장·복원
 - [Next.js 환경변수 관리](./tech/frontend/nextjs-env-vars.md) — NEXT_PUBLIC_ 규칙, .env 우선순위, 민감 정보 분류

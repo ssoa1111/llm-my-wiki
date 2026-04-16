@@ -55,6 +55,16 @@ const queryClient = new QueryClient({
 
 > **핵심**: `staleTime`이 지나도 캐시엔 남음 → 화면 깜빡임 없이 기존 데이터 보여주고 백그라운드 refetch
 
+**언마운트 후 다시 돌아왔을 때의 동작 (gcTime 진행 중)**:
+
+| 상황 | 결과 |
+|---|---|
+| gcTime 진행중 + staleTime 안 지남 | 캐시 그대로, refetch ❌ |
+| gcTime 진행중 + staleTime 지남 | 캐시 보여주며 백그라운드 refetch ✅ |
+| gcTime 만료 후 재방문 | 캐시 없음, 로딩부터 시작 🔄 |
+
+> **설정 원칙**: gcTime은 항상 staleTime보다 길게 설정 (gcTime ≥ staleTime)
+
 ---
 
 ### 3. 주요 쿼리 옵션

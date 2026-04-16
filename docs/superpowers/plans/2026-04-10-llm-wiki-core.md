@@ -12,24 +12,25 @@
 
 ## File Map
 
-| 파일 | 역할 | 상태 |
-|------|------|------|
-| `CLAUDE.md` | Claude 행동 규칙 스키마 (핵심) | 생성 |
-| `wiki/index.md` | 전체 페이지 카탈로그 | 생성 |
-| `wiki/log.md` | 활동 로그 (append-only) | 생성 |
-| `wiki/concepts/` | 개념 페이지 폴더 | 생성 |
-| `wiki/entities/` | 인물·도구 페이지 폴더 | 생성 |
-| `wiki/books/` | 책·논문 요약 폴더 | 생성 |
-| `wiki/tech/` | 기술 노트 폴더 | 생성 |
-| `wiki/syntheses/` | 크로스토픽 분석 폴더 | 생성 |
-| `sources/` | 원본 소스 보관 폴더 | 생성 |
-| `sources/sample-article.md` | 테스트용 샘플 소스 | 생성 |
+| 파일                        | 역할                           | 상태 |
+| --------------------------- | ------------------------------ | ---- |
+| `CLAUDE.md`                 | Claude 행동 규칙 스키마 (핵심) | 생성 |
+| `wiki/index.md`             | 전체 페이지 카탈로그           | 생성 |
+| `wiki/log.md`               | 활동 로그 (append-only)        | 생성 |
+| `wiki/concepts/`            | 개념 페이지 폴더               | 생성 |
+| `wiki/entities/`            | 인물·도구 페이지 폴더          | 생성 |
+| `wiki/books/`               | 책·논문 요약 폴더              | 생성 |
+| `wiki/tech/`                | 기술 노트 폴더                 | 생성 |
+| `wiki/syntheses/`           | 크로스토픽 분석 폴더           | 생성 |
+| `sources/`                  | 원본 소스 보관 폴더            | 생성 |
+| `sources/sample-article.md` | 테스트용 샘플 소스             | 생성 |
 
 ---
 
 ## Task 1: 폴더 구조 생성
 
 **Files:**
+
 - Create: `wiki/concepts/.gitkeep`
 - Create: `wiki/entities/.gitkeep`
 - Create: `wiki/books/.gitkeep`
@@ -56,6 +57,7 @@ ls -R wiki/ sources/
 ```
 
 Expected output:
+
 ```
 sources/:
 
@@ -78,6 +80,7 @@ wiki/tech:
 ## Task 2: CLAUDE.md 작성
 
 **Files:**
+
 - Create: `CLAUDE.md`
 
 이 파일이 시스템의 두뇌다. Claude가 이 볼트에서 실행될 때 가장 먼저 읽는 파일.
@@ -86,7 +89,7 @@ wiki/tech:
 
 `C:/Users/etribe/Desktop/testspace/obsidian/CLAUDE.md` 에 다음 내용으로 파일 생성:
 
-```markdown
+````markdown
 # LLM Wiki — 운영 규칙
 
 이 파일은 Claude가 이 Obsidian 볼트를 위키로 유지·관리하기 위한 규칙을 정의합니다.
@@ -96,12 +99,12 @@ wiki/tech:
 
 ## 위키 구조
 
-| 폴더 | 담당 내용 |
-|------|----------|
-| `wiki/concepts/` | 개념, 이론, 알고리즘, 패턴, 프레임워크 |
-| `wiki/entities/` | 인물, 도구, 라이브러리, 프로젝트, 회사 |
-| `wiki/books/` | 책, 논문, 아티클 요약 |
-| `wiki/tech/` | 기술 노트, 코드 패턴, 아키텍처 결정, 설정 |
+| 폴더              | 담당 내용                                           |
+| ----------------- | --------------------------------------------------- |
+| `wiki/concepts/`  | 개념, 이론, 알고리즘, 패턴, 프레임워크              |
+| `wiki/entities/`  | 인물, 도구, 라이브러리, 프로젝트, 회사              |
+| `wiki/books/`     | 책, 논문, 아티클 요약                               |
+| `wiki/tech/`      | 기술 노트, 코드 패턴, 아키텍처 결정, 설정           |
 | `wiki/syntheses/` | 여러 개념을 연결하는 비교 분석, 크로스토픽 인사이트 |
 
 ---
@@ -137,6 +140,7 @@ wiki/tech:
 
 - [소스명](../../sources/filename.md) — YYYY-MM-DD
 ```
+````
 
 ---
 
@@ -198,13 +202,14 @@ wiki/tech:
   - 고아 페이지: ...
   - 제안: ...
 ```
-```
+
+````
 
 - [ ] **Step 2: 파일이 제대로 생성됐는지 확인**
 
 ```bash
 cat CLAUDE.md | head -20
-```
+````
 
 Expected: 파일 첫 20줄 출력됨
 
@@ -213,6 +218,7 @@ Expected: 파일 첫 20줄 출력됨
 ## Task 3: wiki/index.md 초기화
 
 **Files:**
+
 - Create: `wiki/index.md`
 
 - [ ] **Step 1: wiki/index.md 생성**
@@ -263,6 +269,7 @@ _아직 없음_
 ## Task 4: wiki/log.md 초기화
 
 **Files:**
+
 - Create: `wiki/log.md`
 
 - [ ] **Step 1: wiki/log.md 생성**
@@ -285,6 +292,7 @@ _아직 활동 없음_
 ## Task 5: 샘플 소스 생성 및 ingest 테스트
 
 **Files:**
+
 - Create: `sources/sample-rag-vs-wiki.md`
 
 이 태스크는 시스템이 실제로 동작하는지 검증한다.
@@ -348,6 +356,7 @@ ls wiki/concepts/ wiki/entities/ wiki/books/ wiki/tech/ wiki/syntheses/
 
 Expected: 적어도 5개 이상의 .md 파일이 생성됨  
 예시:
+
 ```
 wiki/concepts/:
 rag.md  llm-wiki.md  vector-database.md

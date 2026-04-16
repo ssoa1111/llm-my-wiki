@@ -87,6 +87,7 @@ merchant_uid = f"ORDER_{timestamp}_{user_id}"
 
 ## 관련 페이지
 
+- [Supabase + Toss Payments 연동](./supabase-toss-payments.md) — Toss 구체 구현: DB 설계·트랜잭션·쿠폰·pending 만료 처리
 - [Zod — 스키마 유효성 검증](./zod-validation.md) — 서버에서 결제 데이터 검증
 - [JWT 인증 — Next.js 구현](./jwt-auth-nextjs.md) — 인증된 사용자만 결제 가능하도록
 - [중앙 집중식 에러 처리](./centralized-error-handling.md) — 결제 실패 에러 처리 패턴

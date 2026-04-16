@@ -7,18 +7,18 @@
 
 ## 위키 구조
 
-| 폴더 | 담당 내용 |
-|------|----------|
-| `wiki/concepts/` | 개념, 이론, 알고리즘, 패턴, 프레임워크 |
-| `wiki/entities/` | 인물, 도구, 라이브러리, 프로젝트, 회사 |
-| `wiki/books/` | 책, 논문, 아티클 요약 |
-| `wiki/tech/n8n/` | n8n 워크플로우, 노드 설정, 연동 패턴 |
-| `wiki/tech/ai/` | LLM, RAG, 임베딩, LangGraph, MCP, Claude |
-| `wiki/tech/frontend/` | React, Next.js, 상태관리, 렌더링, 성능 |
-| `wiki/tech/backend/` | API, DB, SQL, 인증, 보안, 결제 |
-| `wiki/tech/infra/` | Docker, Git, 모노레포, 개발환경 |
-| `wiki/tech/` (루트) | CS 기초, TypeScript 등 범용 기술 개념 |
-| `wiki/syntheses/` | 여러 개념을 연결하는 비교 분석, 크로스토픽 인사이트 |
+| 폴더                  | 담당 내용                                           |
+| --------------------- | --------------------------------------------------- |
+| `wiki/concepts/`      | 개념, 이론, 알고리즘, 패턴, 프레임워크              |
+| `wiki/entities/`      | 인물, 도구, 라이브러리, 프로젝트, 회사              |
+| `wiki/books/`         | 책, 논문, 아티클 요약                               |
+| `wiki/tech/n8n/`      | n8n 워크플로우, 노드 설정, 연동 패턴                |
+| `wiki/tech/ai/`       | LLM, RAG, 임베딩, LangGraph, MCP, Claude            |
+| `wiki/tech/frontend/` | React, Next.js, 상태관리, 렌더링, 성능              |
+| `wiki/tech/backend/`  | API, DB, SQL, 인증, 보안, 결제                      |
+| `wiki/tech/infra/`    | Docker, Git, 모노레포, 개발환경                     |
+| `wiki/tech/` (루트)   | CS 기초, TypeScript 등 범용 기술 개념               |
+| `wiki/syntheses/`     | 여러 개념을 연결하는 비교 분석, 크로스토픽 인사이트 |
 
 ---
 
@@ -72,6 +72,7 @@
 **출처가 여러 개인 페이지** → 해당 출처 항목만 `## 출처`에서 제거. 페이지는 유지.
 
 **출처가 하나뿐인 페이지** → 다음 기준으로 판단:
+
 - 페이지 내용이 다른 wiki 페이지에서 이미 링크되거나 참조되고 있으면 → 페이지 유지, 출처만 제거
 - 어디서도 참조되지 않는 고아 페이지면 → 페이지 삭제 + `wiki/index.md`에서 항목 제거
 
@@ -100,7 +101,7 @@
      - Docker/Git/인프라/개발환경 → `wiki/tech/infra/topic.md`
      - CS 기초, TypeScript 등 범용 → `wiki/tech/topic.md`
    - 여러 개념이 연결되면 → `wiki/syntheses/topic.md` 에 분석 생성
-   > **기존 페이지 업데이트 시**: 기존 내용을 보존하고 새 정보를 추가하거나 수정할 것. 기존 내용을 삭제하지 말 것.
+     > **기존 페이지 업데이트 시**: 기존 내용을 보존하고 새 정보를 추가하거나 수정할 것. 기존 내용을 삭제하지 말 것.
 4. **상호참조**: 새로 만들거나 수정한 페이지들을 서로 링크로 연결
 5. **index 업데이트**: `wiki/index.md` 에 새 페이지를 카테고리별로 다음 형식으로 추가:
    `- [페이지 제목](category/filename.md) — 한 줄 요약`

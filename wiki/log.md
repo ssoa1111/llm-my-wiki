@@ -128,6 +128,13 @@
   답변 저장: syntheses/rag-quality-performance.md
   핵심 takeaway: pgvector(무료·<10만 문서)→Qdrant(10-100만)→Pinecone(100만+) 규모별 선택; 코사인 유사도 90% 표준(텍스트 검색에서 방향=의미 비교); Confidence 레벨(≥0.7/0.5/0.3/<0.3) 기반 Multi-Step 재검색 전략으로 False Negative 방지; 병렬처리+캐싱+경량모델로 10-15초→4-6초(60%) 단축; 4단계 진화 경로(pgvector+기본→하이브리드→병렬최적화→Qdrant/Pinecone)로 오버엔지니어링 없는 점진적 고도화
 
+[2026-04-16 10:47] [INGEST] 하네스 엔지니어링 Codex 아티클 + TanStack Query gcTime 보완 (sources/CHANGES.md 증분 ingest)
+  생성: tech/ai/codex-harness-engineering.md
+  업데이트: tech/frontend/tanstack-query-config.md (gcTime/staleTime 시나리오 요약표 + "gcTime ≥ staleTime" 설정 원칙 추가)
+  스킵: Zustand·Vue3·NavHooks·fetch vs TanStack·깃토큰 (2026-04-15 이미 ingest됨, 변경 없음)
+  스킵: 3. TODO/* 삭제 파일 18개 (wiki 어디에도 출처로 참조 없음)
+  핵심 takeaway: OpenAI Harness 팀이 5개월간 수동 코드 작성 없이 ~100만 라인 구축 — AGENTS.md=목차(~100줄)+docs/ 깊은 지식, Chrome DevTools MCP+LogQL/PromQL 관측 가능성으로 에이전트 자율 디버깅, 커스텀 린터로 아키텍처 불변 조건 강제, 황금 원칙 인코딩+doc-gardening 에이전트로 엔트로피 관리; gcTime 진행 중 재방문 시 staleTime 초과 여부로 refetch 결정 — gcTime은 항상 staleTime보다 길게 설정
+
 [2026-04-15 22:00] [QUERY] Next.js 렌더링 전략과 SEO — 렌더링·캐싱·메타데이터·Core Web Vitals 통합 의사결정 가이드
   참조 페이지: concepts/ssr-ssg-isr-csr.md, tech/frontend/nextjs-image-metadata-seo.md, tech/frontend/nextjs-caching.md, tech/frontend/performance-measurement.md
   답변 저장: syntheses/rendering-strategy-seo.md

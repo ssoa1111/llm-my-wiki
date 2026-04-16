@@ -2,8 +2,8 @@
 
 > Claude가 자동 관리하는 지식 카탈로그. 수동 편집 금지.
 
-**마지막 업데이트**: 2026-04-15  
-**총 페이지**: 95
+**마지막 업데이트**: 2026-04-16  
+**총 페이지**: 96
 
 ---
 
@@ -39,7 +39,7 @@ _아직 없음_
 
 ---
 
-## Tech (66)
+## Tech (67)
 
 - [벡터 데이터베이스](./tech/ai/vector-database.md) — RAG의 핵심 인프라, 임베딩 벡터 저장 및 유사도 검색
 - [임베딩 모델](./tech/ai/embedding-models.md) — 텍스트를 벡터로 변환, OpenAI/Cohere/오픈소스 비교
@@ -98,6 +98,7 @@ _아직 없음_
 - [n8n GA4 데이터 분석](./tech/n8n/n8n-ga4-analysis.md) — 네트워크 모니터링용 GA4 dimensions/metrics 중요도 분류
 - [Claude Code 명령어 & 워크플로우](./tech/ai/claude-code-commands.md) — claude -resume, /logout, /status, 5단계 구현 패턴
 - [Python RAG 구현](./tech/ai/rag-python-implementation.md) — LangChain+FAISS 기본 RAG, LangGraph 멀티에이전트 구조
+- [Codex 에이전트 우선 개발](./tech/ai/codex-harness-engineering.md) — 코드 직접 작성 없이 AI가 100만 라인 생성한 Harness Engineering 방법론
 - [프론트엔드 실전 에러 패턴](./tech/frontend/frontend-error-patterns.md) — React Hook Form 리렌더링, searchParam 인코딩, Zustand 초기화, recharts/shadcn
 - [MCP 서버 개발](./tech/ai/mcp-server-development.md) — TypeScript MCP 서버 구현, 임베딩+웹 검색 fallback 패턴
 - [spec-kit — SDD 도구](./tech/infra/spec-kit.md) — GitHub의 의도 중심 개발 도구, 7단계 워크플로우

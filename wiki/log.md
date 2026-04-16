@@ -5,6 +5,11 @@
 
 ---
 
+[2026-04-16 00:00] [QUERY] Next.js 에러 처리 5계층 통합 — API·TanStack Query·ErrorBoundary·error.tsx·window 이벤트·404
+  참조 페이지: tech/backend/centralized-error-handling.md, tech/frontend/tanstack-query-config.md
+  답변 저장: syntheses/nextjs-error-handling.md
+  핵심 takeaway: Level1(fetch wrapper→ApiError) → Level2(QueryCache.onError, throwOnError 선택) → Level3(ErrorBoundary, 컴포넌트 단위 격리) → Level4(error.tsx, 파일 위치=범위) → Level5(window.onerror+unhandledrejection, 최후 방어) + not-found.tsx/[...not_found] 404 별도 처리; 모든 레벨이 globalErrorHandler.handle()로 수렴
+
 [2026-04-15 16:00] [QUERY] Next.js 보안 아키텍처 synthesis — Middleware·JWT·보안헤더·Zod·스크립트보안 계층 통합
   참조 페이지: tech/frontend/nextjs-middleware-context.md, tech/backend/jwt-auth-nextjs.md, tech/backend/security-headers.md, tech/backend/script-security.md, tech/backend/zod-validation.md
   답변 저장: syntheses/nextjs-security-architecture.md

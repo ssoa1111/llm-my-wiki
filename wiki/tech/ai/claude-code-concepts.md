@@ -52,6 +52,7 @@ npx ccusage             # 사용량 확인
 ## 관련 페이지
 
 - [오케스트레이터 아키텍처](./orchestrator-architecture.md) — Claude Code Subagent가 구현하는 패턴과 연관
+- [Superpowers](../../entities/superpowers.md) — Skill/Subagent 개념을 실제 플러그인으로 구현한 오픈소스 워크플로우
 
 ## 출처
 

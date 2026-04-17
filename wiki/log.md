@@ -5,6 +5,11 @@
 
 ---
 
+[2026-04-17 16:03] [INGEST] 💪⚡초보자를 위한 Superpowers 사용법 & Claude Code 코딩 자동화 가이드.md
+  생성: entities/superpowers.md
+  업데이트: tech/ai/claude-code-concepts.md (Superpowers 역링크 추가)
+  핵심 takeaway: Superpowers = AI 코딩 에이전트용 완전한 개발 워크플로우 플러그인 (GitHub 30k★); 핵심 철학 TDD·Systematic·Evidence over Claims; 7단계 워크플로우(Brainstorming→Git Worktree→Writing Plans→Subagent→TDD→Code Review→Branch 마무리); `/plugin marketplace add obra/superpowers-marketplace`로 설치; 15개 스킬 라이브러리(테스팅/디버깅/협업/메타)
+
 [2026-04-16 00:00] [QUERY] Next.js 에러 처리 5계층 통합 — API·TanStack Query·ErrorBoundary·error.tsx·window 이벤트·404
   참조 페이지: tech/backend/centralized-error-handling.md, tech/frontend/tanstack-query-config.md
   답변 저장: syntheses/nextjs-error-handling.md

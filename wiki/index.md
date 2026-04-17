@@ -22,7 +22,7 @@
 
 ---
 
-## Entities (6)
+## Entities (7)
 
 - [Andrej Karpathy](entities/andrej-karpathy.md) — LLM Wiki 개념 제안자, 전 Tesla AI 디렉터·OpenAI 공동창업자
 - [Vannevar Bush](entities/vannevar-bush.md) — 1945년 Memex 제안, 하이퍼텍스트와 개인 지식 관리의 선구자
@@ -30,6 +30,7 @@
 - [LangChain](entities/langchain.md) — LLM 앱 구축 프레임워크, 선형 RAG 파이프라인에 적합
 - [LangGraph](entities/langgraph.md) — 그래프 기반 AI 오케스트레이션, 고급 RAG·멀티에이전트에 사용
 - [n8n](entities/n8n.md) — 노코드 워크플로우 자동화 도구, AI Agent·API 연동에 활용
+- [Superpowers](entities/superpowers.md) — AI 코딩 에이전트에 체계적 개발 워크플로우를 부여하는 Claude Code 오픈소스 플러그인 (GitHub 30k★)
 
 ---
 

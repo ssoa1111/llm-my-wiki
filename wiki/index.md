@@ -112,7 +112,7 @@ _아직 없음_
 
 ---
 
-## Syntheses (13)
+## Syntheses (14)
 
 - [RAG vs LLM Wiki 비교](syntheses/rag-vs-llm-wiki.md) — 검색 중심 vs. 축적 중심 지식 관리 패러다임 상세 비교
 - [멀티에이전트 구조에서 고급 RAG 패턴 적용](syntheses/multi-agent-rag.md) — Main Agent = Adaptive RAG 라우터, Sub Agent = Corrective+Self-RAG 아키텍처
@@ -127,3 +127,4 @@ _아직 없음_
 - [RAG 품질 & 성능 최적화 실전 가이드](syntheses/rag-quality-performance.md) — 벡터 DB 선택·유사도 측정·검색 정확성·속도 최적화를 단계별로 연결하는 실전 RAG 구축 가이드
 - [JavaScript 동작 원리 3대 핵심](syntheses/javascript-core-concepts.md) — 클로저(렉시컬 스코프)·프로토타입(상속)·이벤트 루프(비동기)가 실제 코드에서 어떻게 함께 작동하는지 통합 분석
 - [Next.js 렌더링 전략과 SEO](syntheses/rendering-strategy-seo.md) — 콘텐츠 특성에 따른 SSG/ISR/SSR/CSR 선택, 캐싱 연동, generateMetadata, Core Web Vitals 통합 의사결정 가이드
+- [Next.js 에러 처리 완전 가이드](syntheses/nextjs-error-handling.md) — API fetch→TanStack Query→ErrorBoundary→error.tsx→window 이벤트 5계층 방어선 통합 아키텍처
